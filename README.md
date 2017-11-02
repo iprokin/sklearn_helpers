@@ -6,7 +6,7 @@ Wrapper around sklearn to make it play nicely with pandas and other helper funct
 
 ### sklearn meets pamdas and they become friends
 
-```{.python}
+```python
 from sklearn import linear_model
 from sklearn_helpers import sklearnDf
 
@@ -17,7 +17,7 @@ vmodel = sklearnDf(model) # pandas-friendly version
 
 Now you can call:
 
-```{.python}
+```python
 vmodel.fit(dfX, dfY)
 dfYpred = vmodel.predict(dfX)
 
@@ -25,7 +25,7 @@ print(dfYpred.head())
 ```
 
 Instead of
-```{.python}
+```python
 X = dfX.values
 Y = dfY.values
 model.fit(X, Y)
@@ -38,7 +38,7 @@ print(dfYpred.head())
 ### kNN returns std not just mean and plays with pandas as well
 
 
-```{.python}
+```python
 class sklearnDfM(sklearnDf):
     def predict(self, dfX):
         res = self.model.predict(
