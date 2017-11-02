@@ -4,7 +4,7 @@ Wrapper around sklearn to make it play nicely with pandas and other helper funct
 
 ## Usage example
 
-### sklearn meets pamdas and they become friends
+### Example 1, where sklearn meets pandas and they become friends
 
 ```python
 from sklearn import linear_model
@@ -35,7 +35,7 @@ dfYpred = pd.DataFrame(Y, index=dfX.index, columns=dfY.columns)
 print(dfYpred.head())
 ```
 
-### kNN returns std not just mean and plays with pandas as well
+### Example 2, where kNN returns not just mean but also std and keeps friendship with pandas
 
 
 ```python
